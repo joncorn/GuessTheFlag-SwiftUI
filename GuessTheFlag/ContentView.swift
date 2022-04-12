@@ -24,12 +24,24 @@ import SwiftUI
 // Angular gradient
 //AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
 
+// Button w alert
+//@State private var showingAlert = false
+//var body: some View {
+//    Button("show alert") {
+//        showingAlert = true
+//    }
+//    .alert("Important message", isPresented: $showingAlert) {
+//        Button("Delete", role: .destructive) { }
+//        Button("Cancel", role: .cancel) { }
+//    } message: {
+//        Text("Please read this")
+//    }
+//}
+
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            RadialGradient(gradient: Gradient(colors: [.mint, .black]), center: .center, startRadius: 20, endRadius: 200)
-            Text("hello")
-        }
+        Text("sup")
+            .padding()
     }
 }
 
@@ -38,3 +50,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
