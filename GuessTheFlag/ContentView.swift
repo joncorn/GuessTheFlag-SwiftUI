@@ -7,31 +7,25 @@
 
 import SwiftUI
 
+// .primary refers to primary color for text
+// color() has a lot of customization ability
+// .foregroundStyle vs .foregroundColor
+// Style lets color come through the text color
+
 struct ContentView: View {
     var body: some View {
-        // to add multiple text elements, they need to be contained in a stack
-        // Vstack meaning up-and-down orentation
-//        VStack(alignment: .leading) {
-//            Text("Hello, world!")
-//            Text("This is another text view")
-        // Created a grid using VStacks and HStacks
-        VStack {
-            HStack(spacing: 20) {
-                Text("hi")
-                Text("hi")
-                Text("hi")
+        ZStack {
+            VStack(spacing: 0) {
+                Color.blue
+                Color.red
             }
-            HStack(spacing: 20) {
-                Text("hi")
-                Text("hi")
-                Text("hi")
-            }
-            HStack(spacing: 20) {
-                Text("hi")
-                Text("hi")
-                Text("hi")
-            }
+            
+            Text("hi")
+                .foregroundStyle(.secondary)
+                .padding(50)
+                .background(.ultraThinMaterial)
         }
+        .ignoresSafeArea()
     }
 }
 
