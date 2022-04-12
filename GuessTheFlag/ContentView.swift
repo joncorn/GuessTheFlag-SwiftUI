@@ -12,20 +12,24 @@ import SwiftUI
 // .foregroundStyle vs .foregroundColor
 // Style lets color come through the text color
 
+// LinearGradient
+//LinearGradient(gradient: Gradient(stops: [
+//    .init(color: .mint, location: 0.20),
+//    .init(color: .pink, location: 0.80)
+//]), startPoint: .top, endPoint: .bottom)
+
+// Circular Gradient
+//RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 20, endRadius: 200)
+
+// Angular gradient
+//AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
+
 struct ContentView: View {
     var body: some View {
         ZStack {
-            VStack(spacing: 0) {
-                Color.blue
-                Color.red
-            }
-            
-            Text("hi")
-                .foregroundStyle(.secondary)
-                .padding(50)
-                .background(.ultraThinMaterial)
+            RadialGradient(gradient: Gradient(colors: [.mint, .black]), center: .center, startRadius: 20, endRadius: 200)
+            Text("hello")
         }
-        .ignoresSafeArea()
     }
 }
 
